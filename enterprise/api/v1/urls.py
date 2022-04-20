@@ -4,19 +4,25 @@ URL definitions for enterprise api version 1 endpoint.
 
 from rest_framework.routers import DefaultRouter
 
+from django.conf import settings
 from django.urls import re_path
 
 from enterprise.api.v1 import views
 
 router = DefaultRouter()
-router.register("enterprise_catalogs", views.EnterpriseCustomerCatalogViewSet, 'enterprise-catalogs')
+
+# Endpoints are deprecated. See https://github.com/openedx/public-engineering/issues/61
+# This endpoint is no longer used, so it will be removed soon
+if getattr(settings, 'ENABLE_DEPRECATED_API_ENDPOINTS', True):
+    router.register("enterprise_catalogs", views.EnterpriseCustomerCatalogViewSet, 'enterprise-catalogs')
+    router.register("enterprise-customer", views.EnterpriseCustomerViewSet, 'enterprise-customer')
+
 router.register("enterprise-course-enrollment", views.EnterpriseCourseEnrollmentViewSet, 'enterprise-course-enrollment')
 router.register(
     "licensed-enterprise-course-enrollment",
     views.LicensedEnterpriseCourseEnrollmentViewSet,
     'licensed-enterprise-course-enrollment'
 )
-router.register("enterprise-customer", views.EnterpriseCustomerViewSet, 'enterprise-customer')
 router.register("enterprise-learner", views.EnterpriseCustomerUserViewSet, 'enterprise-learner')
 router.register("pending-enterprise-learner", views.PendingEnterpriseCustomerUserViewSet, 'pending-enterprise-learner')
 router.register(
