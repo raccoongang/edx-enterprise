@@ -17,6 +17,10 @@ Unreleased
 ----------
 * nothing
 
+[3.42.6]
+---------
+fix: mysql8 identifier name max length restrictions resolved
+
 [3.42.5]
 ---------
 fix: improve guards on fk data backfill job
