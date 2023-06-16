@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('blackboard_user_email', models.CharField(max_length=255)),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(db_index=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(db_index=True)),
                 ('course_id', models.CharField(help_text="The course run's key which is used to uniquely identify the course for blackboard.", max_length=255)),
                 ('subsection_id', models.CharField(db_index=True, help_text="The course's subsections's key.", max_length=255)),
                 ('grade_point_score', models.FloatField(help_text='The amount of points that the learner scored on the subsection.')),
