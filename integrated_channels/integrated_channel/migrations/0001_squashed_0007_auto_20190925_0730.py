@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             name='LearnerDataTransmissionAudit',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(db_index=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(db_index=True)),
                 ('course_id', models.CharField(max_length=255)),
                 ('course_completed', models.BooleanField(default=True)),
                 ('completed_timestamp', models.BigIntegerField()),

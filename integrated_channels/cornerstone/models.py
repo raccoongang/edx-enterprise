@@ -170,7 +170,7 @@ class CornerstoneLearnerDataTransmissionAudit(TimeStampedModel):
         null=False
     )
 
-    enterprise_course_enrollment_id = models.PositiveIntegerField(
+    enterprise_course_enrollment_id = models.IntegerField(
         blank=True,
         null=True,
         db_index=True,

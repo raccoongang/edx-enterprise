@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('completed_timestamp', models.CharField(help_text='Represents the Blackboard representation of a timestamp: yyyy-mm-dd, which is always 10 characters.', max_length=10)),
                 ('course_id', models.CharField(max_length=255)),
                 ('course_completed', models.BooleanField(default=True, help_text="The learner's course completion status transmitted to Blackboard.")),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(db_index=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(db_index=True)),
                 ('grade', models.DecimalField(blank=True, decimal_places=2, max_digits=3, null=True)),
                 ('total_hours', models.FloatField(blank=True, null=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),

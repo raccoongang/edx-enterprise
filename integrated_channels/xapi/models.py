@@ -82,7 +82,7 @@ class XAPILearnerDataTransmissionAudit(TimeStampedModel):
         related_name='xapi_transmission_audit',
         on_delete=models.CASCADE,
     )
-    enterprise_course_enrollment_id = models.PositiveIntegerField(db_index=True, blank=True, null=True)
+    enterprise_course_enrollment_id = models.IntegerField(db_index=True, blank=True, null=True)
     course_id = models.CharField(max_length=255, blank=False, null=False, db_index=True)
     course_completed = models.BooleanField(default=False)
     completed_timestamp = models.DateTimeField(null=True, blank=True)

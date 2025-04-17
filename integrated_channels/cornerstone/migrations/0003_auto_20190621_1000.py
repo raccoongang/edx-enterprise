@@ -30,6 +30,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cornerstonelearnerdatatransmissionaudit',
             name='enterprise_course_enrollment_id',
-            field=models.PositiveIntegerField(blank=True, db_index=True, null=True),
+            field=models.IntegerField(blank=True, db_index=True, null=True),
         ),
     ]

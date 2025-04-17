@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('canvas_user_email', models.CharField(max_length=255)),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(db_index=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(db_index=True)),
                 ('course_id', models.CharField(help_text="The course run's key which is used to uniquely identify the course for Canvas.", max_length=255)),
                 ('course_completed', models.BooleanField(default=True, help_text="The learner's course completion status transmitted to Canvas.")),
                 ('completed_timestamp', models.CharField(help_text='Represents the Canvas representation of a timestamp: yyyy-mm-dd, which is always 10 characters.', max_length=10)),

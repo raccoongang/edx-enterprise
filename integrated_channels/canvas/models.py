@@ -130,7 +130,7 @@ class CanvasLearnerAssessmentDataTransmissionAudit(models.Model):
         null=False
     )
 
-    enterprise_course_enrollment_id = models.PositiveIntegerField(
+    enterprise_course_enrollment_id = models.IntegerField(
         blank=False,
         null=False,
         db_index=True
@@ -236,7 +236,7 @@ class CanvasLearnerDataTransmissionAudit(models.Model):
         null=False
     )
 
-    enterprise_course_enrollment_id = models.PositiveIntegerField(
+    enterprise_course_enrollment_id = models.IntegerField(
         blank=False,
         null=False,
         db_index=True

@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('moodle_user_email', models.EmailField(help_text='The learner`s Moodle email. This must match the email on edX', max_length=255)),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(db_index=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(db_index=True)),
                 ('course_id', models.CharField(max_length=255)),
                 ('grade', models.DecimalField(blank=True, decimal_places=2, max_digits=3, null=True)),
                 ('total_hours', models.FloatField(blank=True, null=True)),

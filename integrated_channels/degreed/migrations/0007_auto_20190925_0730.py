@@ -25,6 +25,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='degreedlearnerdatatransmissionaudit',
             name='enterprise_course_enrollment_id',
-            field=models.PositiveIntegerField(db_index=True),
+            field=models.IntegerField(db_index=True),
         ),
     ]

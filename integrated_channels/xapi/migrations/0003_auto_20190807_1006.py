@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
                 ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(blank=True, db_index=True, null=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(blank=True, db_index=True, null=True)),
                 ('course_id', models.CharField(db_index=True, max_length=255)),
                 ('course_completed', models.BooleanField(default=False)),
                 ('completed_timestamp', models.DateTimeField(blank=True, null=True)),

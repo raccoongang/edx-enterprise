@@ -122,7 +122,7 @@ class BlackboardLearnerAssessmentDataTransmissionAudit(models.Model):
         null=False
     )
 
-    enterprise_course_enrollment_id = models.PositiveIntegerField(
+    enterprise_course_enrollment_id = models.IntegerField(
         blank=False,
         null=False,
         db_index=True
@@ -238,7 +238,7 @@ class BlackboardLearnerDataTransmissionAudit(models.Model):
         default=True,
         help_text="The learner's course completion status transmitted to Blackboard."
     )
-    enterprise_course_enrollment_id = models.PositiveIntegerField(blank=False, null=False, db_index=True)
+    enterprise_course_enrollment_id = models.IntegerField(blank=False, null=False, db_index=True)
     grade = models.DecimalField(blank=True, null=True, max_digits=3, decimal_places=2)
     total_hours = models.FloatField(null=True, blank=True)
 

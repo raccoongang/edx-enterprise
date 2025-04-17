@@ -52,7 +52,7 @@ class Migration(migrations.Migration):
                 ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
                 ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
                 ('user_guid', models.CharField(max_length=255)),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(blank=True, null=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(blank=True, null=True)),
                 ('course_id', models.CharField(help_text="The course run's key which is used to uniquely identify the course for Cornerstone.", max_length=255)),
                 ('session_token', models.CharField(max_length=255)),
                 ('callback_url', models.CharField(max_length=255)),

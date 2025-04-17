@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('sapsf_user_id', models.CharField(max_length=255)),
-                ('enterprise_course_enrollment_id', models.PositiveIntegerField(db_index=True)),
+                ('enterprise_course_enrollment_id', models.IntegerField(db_index=True)),
                 ('course_id', models.CharField(max_length=255)),
                 ('course_completed', models.BooleanField(default=True)),
                 ('instructor_name', models.CharField(blank=True, max_length=255)),

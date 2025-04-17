@@ -136,7 +136,7 @@ class MoodleLearnerDataTransmissionAudit(models.Model):
         help_text='The learner`s Moodle email. This must match the email on edX'
     )
 
-    enterprise_course_enrollment_id = models.PositiveIntegerField(blank=False, null=False, db_index=True)
+    enterprise_course_enrollment_id = models.IntegerField(blank=False, null=False, db_index=True)
     course_id = models.CharField(max_length=255, blank=False, null=False)
     course_completed = models.BooleanField(default=False)
     grade = models.DecimalField(blank=True, null=True, max_digits=3, decimal_places=2)
